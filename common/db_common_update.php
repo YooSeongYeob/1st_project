@@ -63,6 +63,7 @@ function update_todo_list_info_no( &$param_arr )
     {
         $conn->rollback();
         return $e->getMessage();
+        
     }
     finally
     {
