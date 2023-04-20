@@ -23,16 +23,18 @@ else
 
 
   $list_imp_flg = isset($arr_post['list_imp_flg']) && $arr_post['list_imp_flg'] == 1 ? 1 : 0;
-  $arr_info =
+  
+  $arr_info = 
    array
    (
-    ":list_title" => $param_arr["list_title"]
-    ,":list_detail" => $param_arr["list_detail"]
-    ,":list_start_date" => $param_arr["list_start_date"]
-    ,":list_due_date" => $param_arr["list_due_date"]
-    ,":list_imp_flg" => $list_imp_flg
+    "list_title" => $param_arr["list_title"]
+    ,"list_detail" => $param_arr["list_detail"]
+    ,"list_start_date" => $param_arr["list_start_date"]
+    ,"list_due_date" => $param_arr["list_due_date"]
+    ,"list_imp_flg" => $list_imp_flg
   );
 
+  var_dump($arr_info);
 
   $result_cnt = update_todo_list_info_no( $arr_info );
 
